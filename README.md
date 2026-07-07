@@ -1,36 +1,100 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🎓 CampusConnect
 
-## Getting Started
+CampusConnect is a full-stack campus management platform built to streamline day-to-day student and administrator activities. It provides a centralized dashboard with secure authentication, AI-powered notice management, Lost & Found tracking, and Event Management, all backed by Supabase and enhanced with Google's Gemini API.
 
-First, run the development server:
+---
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+## 🚀 Features
+
+### 🔐 Authentication & Authorization
+- Secure email/password authentication using Supabase Auth
+- Session persistence across browser refreshes
+- Role-based access control (Student/Admin)
+- Protected routes using Next.js Middleware
+- Automatic user profile creation after registration
+
+---
+
+### 📢 AI-Powered Notice Board
+- Admins can create, pin, edit, and delete notices
+- Category-based notice filtering
+- Individual notice detail pages
+- Gemini AI automatically generates concise notice summaries
+- Pinned notices displayed at the top
+
+---
+
+### 🎒 Lost & Found
+- Report lost and found items
+- Upload images using Supabase Storage
+- Gemini AI automatically generates relevant tags
+- Filter by Lost/Found type and status
+- Owner-only permission to mark items as resolved
+- Real-time status tracking
+
+---
+
+### 📅 Event Management
+- Admin event creation
+- Student event registration
+- Upcoming and Past event categorization
+- Duplicate registration prevention
+- Automatic **"Full"** status when capacity is reached
+- Category-based filtering
+
+---
+
+## 🛠️ Tech Stack
+
+### Frontend
+- Next.js (App Router)
+- React.js
+- TypeScript
+- Tailwind CSS
+
+### Backend
+- Supabase
+- PostgreSQL
+- Supabase Auth
+- Supabase Storage
+
+### AI
+- Gemini API
+
+## 📂 Project Structure
+
+```
+app/
+├── dashboard/
+├── login/
+├── register/
+├── notices/
+├── lost-found/
+├── events/
+├── middleware.ts
+├── lib/
+│   └── supabase.ts
+└── api/
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+---
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## ✨ AI Features
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### Notice Summarizer
+Generates concise summaries for every notice using Gemini API.
 
-## Learn More
+### Lost & Found Auto-Tagging
+Automatically generates relevant tags based on the item's title and description to improve discoverability.
 
-To learn more about Next.js, take a look at the following resources:
+---
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 🔒 Security Features
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- Authentication with Supabase Auth
+- Session persistence
+- Protected routes via Next.js Middleware
+- Role-based authorization
+- Owner-only access for sensitive actions
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Built as a modern full-stack campus utility platform leveraging AI to simplify everyday campus workflows.
