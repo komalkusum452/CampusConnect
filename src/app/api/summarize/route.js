@@ -11,7 +11,7 @@ export async function POST(request) {
  const response = await ai.models.generateContent({
   model: "gemini-2.5-flash",
   contents: `
-Summarize the following campus notice in 2-3 bullet points.
+Summarize the following campus notice in 50 words max.
 
 Do NOT use Markdown.
 Do NOT use **, *, or headings.
